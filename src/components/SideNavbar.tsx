@@ -20,7 +20,7 @@ const SideNavbar = ({}: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const onlyWidth = useWindowWidth();
-  const mobileWidth = onlyWidth < 786;
+  const mobileWidth = onlyWidth < 860;
 
   return (
     <div className="relative min-w-[90px] border-r sm:pr-5 pt-24">

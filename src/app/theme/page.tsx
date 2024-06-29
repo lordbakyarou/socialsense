@@ -98,23 +98,23 @@ export default function ThemePage({}: Props) {
         </div>
         <main>
           <div className="flex flex-col md:flex-row m-4 p-4 md:p-8 justify-between items-center bg-gray-200 rounded-md shadow-sm">
-            <div className="ml-4 rounded-md text-lg md:text-2xl font-bold">
+            <div className="ml-4 rounded-md text-lg max-sm:text-sm font-bold">
               Apply a skin to your profile
             </div>
             <div className="flex justify-evenly gap-4 mt-4 md:mt-0">
-              <button className="bg-gray-100 pt-2 pb-2 pl-8 pr-8 rounded-md">
+              <button className="bg-gray-100 p-2 max-sm:text-sm rounded-md">
                 + Custom
               </button>
               <button
-                className="rounded-md bg-black text-white pt-2 pb-2 pl-8 pr-8"
+                className="rounded-md bg-black text-white p-2 max-sm:text-sm"
                 onClick={handleSaveClick}
               >
                 Save
               </button>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row">
-            <div className="m-4 w-full md:w-[500px]">
+          <div className="flex max-lg:flex-col">
+            <div className="p-2 w-full md:w-[500px] ">
               <h1 className="text-lg font-bold">Solids</h1>
               <div className="flex gap-2 w-[500px] max-sm:w-full flex-wrap">
                 {solids.map((color) => (
@@ -164,7 +164,7 @@ export default function ThemePage({}: Props) {
                 ))}
               </div>
             </div>
-            <div className="w-full border">
+            <div className="w-full border p-2">
               <div
                 className={`w-full ${selectedColor} rounded-xl text-${textColor}`}
               >
