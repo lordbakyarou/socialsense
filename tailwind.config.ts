@@ -24,6 +24,28 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        backgroundImage: {
+          "radial-red-blue":
+            "radial-gradient(circle at center, #ff0000, #0000ff)",
+          "radial-green-yellow":
+            "radial-gradient(circle at center, #00ff00, #ffff00)",
+          "radial-purple-pink":
+            "radial-gradient(circle at center, #800080, #ff00ff)",
+          "radial-orange-lime":
+            "radial-gradient(circle at center, #ffa500, #00ff00)",
+          "radial-teal-navy":
+            "radial-gradient(circle at center, #008080, #000080)",
+          "radial-maroon-aqua":
+            "radial-gradient(circle at center, #800000, #00ffff)",
+          "radial-olive-fuchsia":
+            "radial-gradient(circle at center, #808000, #ff00ff)",
+          "radial-cyan-magenta":
+            "radial-gradient(circle at center, #00ffff, #ff00ff)",
+          "radial-indigo-gold":
+            "radial-gradient(circle at center, #4b0082, #ffd700)",
+          "radial-silver-black":
+            "radial-gradient(circle at center, #c0c0c0, #000000)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

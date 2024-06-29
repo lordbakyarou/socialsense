@@ -5,7 +5,15 @@ import Image from "next/image";
 import PageTitle from "@/components/ui/PageTItle";
 import { MapPin } from "lucide-react";
 
+import {
+  radialGradient,
+  linearGradient,
+  solids,
+} from "../../constants/colorConstants";
+
 type Props = {};
+
+const foreground = ["black", "white"];
 
 export default function ThemePage({}: Props) {
   const [selectedColor, setSelectedColor] = useState<string>("");
@@ -66,20 +74,7 @@ export default function ThemePage({}: Props) {
             <div className="m-4 w-full md:w-[500px]">
               <h1 className="text-lg font-bold">Solids</h1>
               <div className="grid grid-cols-6 md:grid-cols-7 gap-1">
-                {[
-                  "bg-black",
-                  "bg-gray-200",
-                  "bg-white",
-                  "bg-blue-500",
-                  "bg-red-500",
-                  "bg-green-500",
-                  "bg-yellow-500",
-                  "bg-purple-500",
-                  "bg-pink-500",
-                  "bg-indigo-500",
-                  "bg-teal-500",
-                  "bg-orange-500",
-                ].map((item) => (
+                {solids.map((item) => (
                   <div
                     key={item}
                     className={`w-10 h-10 ${item} border cursor-pointer ${
@@ -91,20 +86,7 @@ export default function ThemePage({}: Props) {
               </div>
               <h1 className="text-lg font-bold">Linear Gradient</h1>
               <div className="grid grid-cols-6 md:grid-cols-7 gap-2">
-                {[
-                  "bg-gradient-to-r from-cyan-500 to-blue-500",
-                  "bg-gradient-to-r from-sky-500 to-indigo-500",
-                  "bg-gradient-to-r from-white to-gray-300",
-                  "bg-gradient-to-r from-blue-500 to-green-500",
-                  "bg-gradient-to-r from-red-500 to-yellow-500",
-                  "bg-gradient-to-r from-green-500 to-teal-500",
-                  "bg-gradient-to-r from-yellow-500 to-orange-500",
-                  "bg-gradient-to-r from-purple-500 to-pink-500",
-                  "bg-gradient-to-r from-pink-500 to-red-500",
-                  "bg-gradient-to-r from-indigo-500 to-purple-500",
-                  "bg-gradient-to-r from-teal-500 to-blue-500",
-                  "bg-gradient-to-r from-orange-500 to-red-500",
-                ].map((gradient) => (
+                {linearGradient.map((gradient) => (
                   <div
                     key={gradient}
                     className={`w-10 h-10 ${gradient} border cursor-pointer ${
@@ -116,23 +98,13 @@ export default function ThemePage({}: Props) {
               </div>
               <h1 className="text-lg font-bold">Radial Gradient</h1>
               <div className="grid grid-cols-6 md:grid-cols-7 gap-1">
-                {[
-                  "radial-gradient-1",
-                  "radial-gradient-2",
-                  "radial-gradient-3",
-                  "radial-gradient-4",
-                  "radial-gradient-5",
-                  "radial-gradient-6",
-                  "radial-gradient-7",
-                  "radial-gradient-8",
-                  "radial-gradient-9",
-                  "radial-gradient-10",
-                  "radial-gradient-11",
-                  "radial-gradient-12",
-                ].map((gradient) => (
+                {radialGradient.map((gradient) => (
                   <div
                     key={gradient}
-                    className={`w-10 h-10 ${gradient} border cursor-pointer ${
+                    style={{
+                      background: gradient,
+                    }}
+                    className={`w-10 h-10 border cursor-pointer ${
                       selectedColor === gradient ? "border-black" : ""
                     }`}
                     onClick={() => handleColorClick(gradient)}
@@ -141,7 +113,7 @@ export default function ThemePage({}: Props) {
               </div>
               <h1 className="text-lg font-bold">Foreground Color</h1>
               <div className="grid grid-cols-3 md:grid-cols-7 gap-1">
-                {["black", "white"].map((color) => (
+                {foreground.map((color) => (
                   <div
                     key={color}
                     className={`w-10 h-10 bg-${color} border cursor-pointer ${
