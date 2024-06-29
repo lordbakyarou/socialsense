@@ -84,9 +84,9 @@ export default function ThemePage({}: Props) {
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="flex-1">
-        <div className="flex flex-col md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b space-y-3 md:space-y-0 md:space-x-6">
+        <div className="flex flex-col md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b ">
           <PageTitle title="Themes" />
-          <button className="flex justify-evenly rounded-md items-center pt-2 pb-2 pl-2 pr-2 rounded bg-gray- font-semibold">
+          <button className="flex justify-evenly rounded-md items-center p-2 rounded bg-gray-100 font-semibold">
             Mayur Hanwate
             <img
               width={40}
@@ -116,7 +116,7 @@ export default function ThemePage({}: Props) {
           <div className="flex flex-col md:flex-row">
             <div className="m-4 w-full md:w-[500px]">
               <h1 className="text-lg font-bold">Solids</h1>
-              <div className="flex gap-2 w-[500px] flex-wrap">
+              <div className="flex gap-2 w-[500px] max-sm:w-full flex-wrap">
                 {solids.map((color) => (
                   <div
                     key={color}
@@ -128,7 +128,7 @@ export default function ThemePage({}: Props) {
                 ))}
               </div>
               <h1 className="text-lg font-bold">Linear Gradient</h1>
-              <div className="flex gap-2 w-[500px] flex-wrap">
+              <div className="flex gap-2 w-[500px] max-sm:w-full flex-wrap">
                 {linearGradient.map((gradient) => (
                   <div
                     key={gradient}
@@ -140,7 +140,7 @@ export default function ThemePage({}: Props) {
                 ))}
               </div>
               <h1 className="text-lg font-bold">Radial Gradient</h1>
-              <div className="flex  gap-2">
+              <div className="flex gap-2 max-sm:w-full flex-wrap">
                 {radialGradient.map((gradient) => (
                   <div
                     key={gradient}
@@ -152,7 +152,7 @@ export default function ThemePage({}: Props) {
                 ))}
               </div>
               <h1 className="text-lg font-bold">Text Color</h1>
-              <div className=" flex gap-2">
+              <div className=" flex gap-2 max-sm:w-full">
                 {foreground.map((color) => (
                   <div
                     key={color}
