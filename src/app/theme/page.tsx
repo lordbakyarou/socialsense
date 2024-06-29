@@ -35,9 +35,14 @@ export default function ThemePage({}: Props) {
       <div className="flex-1">
         <div className="flex flex-col md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b space-y-3 md:space-y-0 md:space-x-6">
           <PageTitle title="Themes" />
-          <button className="flex justify-evenly rounded-md items-center pt-2 pb-2 pl-2 pr-2 rounded bg-gray-200">
+          <button className="flex justify-evenly rounded-md items-center pt-2 pb-2 pl-2 pr-2 rounded bg-gray- font-semibold">
             Mayur Hanwate
-            <div className="ml-4 w-10 h-10 rounded-full bg-slate-700"></div>
+            <img
+              width={40}
+              height={40}
+              className="rounded-full"
+              src="https://lh3.googleusercontent.com/a/ACg8ocK4HOMAUmzsbMDCegO9UspAC-tpu8yX5wvXFcCOCZLKJQbRd1ET=s360-c-no"
+            />
           </button>
         </div>
         <main>
