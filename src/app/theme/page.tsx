@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import PageTitle from "@/components/ui/PageTItle";
-import { MapPin } from "lucide-react";
+import { MapPin, Check } from "lucide-react";
 
 import {
   radialGradient,
@@ -12,8 +12,6 @@ import {
 } from "../../constants/colorConstants";
 
 type Props = {};
-
-const foreground = ["black", "white"];
 
 export default function ThemePage({}: Props) {
   const [selectedColor, setSelectedColor] = useState<string>("");
@@ -81,6 +79,8 @@ export default function ThemePage({}: Props) {
     "bg-[radial-gradient(circle_at_center,_#d9d9d9,_#f2f2f2)]",
   ];
 
+  const foreground = ["black", "white", "gray-500"];
+
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="flex-1">
@@ -116,77 +116,77 @@ export default function ThemePage({}: Props) {
           <div className="flex flex-col md:flex-row">
             <div className="m-4 w-full md:w-[500px]">
               <h1 className="text-lg font-bold">Solids</h1>
-              <div className="grid grid-cols-6 md:grid-cols-7 gap-1">
-                {solids.map((item) => (
+              <div className="flex gap-2 w-[500px] flex-wrap">
+                {solids.map((color) => (
                   <div
-                    key={item}
-                    className={`w-10 h-10 ${item} border cursor-pointer ${
-                      selectedColor === item ? "border-black" : ""
-                    }`}
-                    onClick={() => handleColorClick(item)}
-                  />
+                    key={color}
+                    className={`w-10 h-10 ${color}  border cursor-pointer flex items-center justify-center`}
+                    onClick={() => handleColorClick(color)}
+                  >
+                    {selectedColor === color && <Check />}
+                  </div>
                 ))}
               </div>
               <h1 className="text-lg font-bold">Linear Gradient</h1>
-              <div className="grid grid-cols-6 md:grid-cols-7 gap-2">
+              <div className="flex gap-2 w-[500px] flex-wrap">
                 {linearGradient.map((gradient) => (
                   <div
                     key={gradient}
-                    className={`w-10 h-10 ${gradient}  border cursor-pointer ${
-                      selectedColor === gradient ? "border-black" : ""
-                    }`}
+                    className={`w-10 h-10 ${gradient}  border cursor-pointer flex items-center justify-center`}
                     onClick={() => handleColorClick(gradient)}
-                  />
+                  >
+                    {selectedColor === gradient && <Check />}
+                  </div>
                 ))}
               </div>
               <h1 className="text-lg font-bold">Radial Gradient</h1>
-              <div className="grid grid-cols-6 md:grid-cols-7 gap-1">
+              <div className="flex  gap-2">
                 {radialGradient.map((gradient) => (
                   <div
                     key={gradient}
-                    className={`w-10 h-10 ${gradient}   border cursor-pointer ${
-                      selectedColor === gradient ? "border-black" : ""
-                    }`}
+                    className={`w-10 h-10 ${gradient}  border cursor-pointer flex items-center justify-center`}
                     onClick={() => handleColorClick(gradient)}
-                  />
+                  >
+                    {selectedColor === gradient && <Check />}
+                  </div>
                 ))}
               </div>
-              <h1 className="text-lg font-bold">Foreground Color</h1>
-              <div className="grid grid-cols-3 md:grid-cols-7 gap-1">
+              <h1 className="text-lg font-bold">Text Color</h1>
+              <div className=" flex gap-2">
                 {foreground.map((color) => (
                   <div
                     key={color}
-                    className={`w-10 h-10 bg-${color} border cursor-pointer ${
-                      textColor === `text-${color}` ? "border-black" : ""
-                    }`}
-                    onClick={() => handleColortext(`text-${color}`)}
-                  />
+                    className={`w-10 h-10 bg-${color}  border cursor-pointer flex items-center justify-center`}
+                    onClick={() => handleColortext(color)}
+                  >
+                    {textColor === color && <Check />}
+                  </div>
                 ))}
               </div>
             </div>
-            <div className="w-full border rounded-lg" id="preview">
+            <div className="w-full border">
               <div
-                className={`w-full ${selectedColor}`}
-                style={{
-                  color: textColor.includes("white") ? "white" : "black",
-                }}
+                className={`w-full ${selectedColor} rounded-xl text-${textColor}`}
               >
                 <div
                   className={`p-2 border-dashed ${selectedColor} rounded-md `}
                 >
                   <div className="font-sans  leading-tight min-h-screen bg-grey-lighter p-8">
-                    <div className="max-w-lg relative  mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div
+                      className={` ${selectedColor} max-w-lg relative  mx-auto bg-white rounded-lg overflow-hidden shadow-lg`}
+                    >
                       <div
-                        className="bg-cover h-40"
-                        style={{
-                          backgroundImage:
-                            "url('https://images.unsplash.com/photo-1655682621708-5e42174d59ce?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-                        }}
-                      ></div>
+                        className={`rounded-xl  border-dashed border-2 overflow-hidden p-2`}
+                      >
+                        <img
+                          className=" w-full object-cover rounded-xl h-40"
+                          src="https://images.unsplash.com/photo-1655682621708-5e42174d59ce?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        />
+                      </div>
                       <div
                         className={`border-black ${selectedColor} px-4 pb-6`}
                       >
-                        <div className="text-center absolute top-20 sm:text-left sm:flex mb-4">
+                        <div className="text-center rounded-full border-dashed border-2 absolute top-20 sm:text-left sm:flex mb-4">
                           <img
                             width={128}
                             height={128}
@@ -199,15 +199,17 @@ export default function ThemePage({}: Props) {
                           <h3 className="font-bold text-2xl mb-1">
                             Mayur Hanwate
                           </h3>
-                          <div className="inline-flex text-grey-dark sm:flex items-center font-semibold text-gray-500">
+                          <div className="inline-flex text-grey-dark sm:flex items-center font-semibold ">
                             (MERN) Full Stack Developer
                           </div>
-                          <div className="inline-flex text-grey-dark sm:flex items-center font-semibold text-gray-500 pt-2">
+                          <div className="inline-flex text-grey-dark sm:flex items-center font-semibold  pt-2">
                             <MapPin />
                             Chandrapur, Maharashtra
                           </div>
-                          <div className="mt-4 inline-flex text-grey-dark sm:flex items-center rounded-lg border border-dashed p-2 border-4 bg-gray-50">
-                            <p className="text-gray-500">
+                          <div
+                            className={`mt-4 inline-flex text-grey-dark sm:flex items-center rounded-lg border-gray-200 border-dashed p-2 border-2 ${selectedColor}`}
+                          >
+                            <p className="">
                               Highly motivated and skilled Frontend Developer
                               with a passion for crafting user-friendly
                               experiences. Proven ability to translate complex
