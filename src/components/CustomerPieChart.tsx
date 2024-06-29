@@ -48,6 +48,7 @@ export default function CustomerPieChart({}: Props) {
             <Cell
               key={`cell-${index}`}
               fill={data[index % data.length].color}
+              className="focus:outline-none"
             />
           ))}
         </Pie>
