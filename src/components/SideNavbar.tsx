@@ -23,7 +23,7 @@ const SideNavbar = ({}: Props) => {
   const mobileWidth = onlyWidth < 786;
 
   return (
-    <div className="relative min-w-[80px] border-r px-3 pt-24">
+    <div className="relative min-w-[90px] border-r sm:pr-5 pt-24">
       {!mobileWidth && (
         <Button
           variant="secondary"
