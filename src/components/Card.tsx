@@ -12,16 +12,18 @@ export type CardProps = {
 export default function Card(props: CardProps) {
   return (
     <CardContent>
-      <section className="flex gap-10 items-center">
-        <div className="w-10 h-10  bg-yellow-100 flex items-center justify-center rounded-full">
-          <props.icon className="text-orange-700  rounded-full " />
+      <section className="flex gap-10 max-sm:gap-5 items-center">
+        <div className="w-10 h-10 max-sm:w-8 max-sm:h-8 bg-yellow-100 flex items-center justify-center rounded-full">
+          <props.icon className="text-orange-700 rounded-full " />
         </div>
 
         <p className="font-semibold">{props.label}</p>
       </section>
       <section>
-        <h1 className="text-3xl font-semibold">{props.amount}</h1>
-        <h4 className="font-semibold text-green-500 flex">
+        <h1 className="text-3xl max-sm:text-xl font-semibold">
+          {props.amount}
+        </h1>
+        <h4 className="font-semibold max-sm:text-sm text-green-500 flex items-center">
           <ArrowUpLeft className="rotate-45" />
           {props.increase}%
         </h4>

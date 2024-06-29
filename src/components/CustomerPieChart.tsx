@@ -30,6 +30,7 @@ interface Item {
 export default function CustomerPieChart({}: Props) {
   const onlyWidth = useWindowWidth();
   const tabletWidth = onlyWidth < 1300;
+  const mobileWidth = onlyWidth < 425;
 
   return (
     <ResponsiveContainer width="100%" height={400}>
@@ -38,8 +39,8 @@ export default function CustomerPieChart({}: Props) {
           data={data}
           cx="50%"
           cy="50%"
-          innerRadius={100}
-          outerRadius={140}
+          innerRadius={mobileWidth ? 40 : 100}
+          outerRadius={mobileWidth ? 80 : 140}
           fill="#8884d8"
           dataKey="value"
         >
