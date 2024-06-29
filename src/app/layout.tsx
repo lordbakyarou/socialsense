@@ -23,7 +23,7 @@ export default function RootLayout({
           "min-h-screen w-full bg-white text-black flex",
           inter.className,
           {
-            "debug-screens": process.env.NODE_ENV === "devlopment",
+            "debug-screens": process.env.NODE_ENV === "development",
           }
         )}
       >
