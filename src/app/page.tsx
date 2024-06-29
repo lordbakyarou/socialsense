@@ -18,7 +18,7 @@ const cardData: CardProps[] = [
 export default function Home() {
   return (
     <div className="flex flex-col gap-5 w-full bg-gray-100 min-h-screen">
-      <PageTitle title="Dashboard" className="pt-5 p-2" />
+      <PageTitle title="Dashboard" className="mt-5 ml-4 p-2" />
       <section className="grid gap-4 transition-all grid-cols-2 max-lg:grid-cols-1">
         <section className="grid grid-cols-2 gap-4 gap-x-8 max-sm:grid-cols-1 w-full">
           {cardData.map((card, index) => (
