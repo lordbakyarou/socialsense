@@ -6,6 +6,7 @@ import { User, ShoppingCart, Banknote, LineChart } from "lucide-react";
 import BarChart from "@/components/BarChart";
 import Dot from "@/components/ui/dot";
 import CustomerPieChart from "@/components/CustomerPieChart";
+import CustomLineChart from "@/components/CustomLineChart";
 
 const cardData: CardProps[] = [
   { label: "Customers", amount: "3,812", increase: "15.73", icon: User },
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-5 w-full bg-gray-100 min-h-screen">
       <PageTitle title="Dashboard" />
-      <section className="grid  gap-4 transition-all grid-cols-2 max-lg:grid-cols-1">
+      <section className="grid gap-4 transition-all grid-cols-2 max-lg:grid-cols-1">
         <section className="grid grid-cols-2 gap-4 gap-x-8 max-sm:grid-cols-1 w-full">
           {cardData.map((card, index) => (
             <Card
@@ -41,7 +42,17 @@ export default function Home() {
           <BarChart />
         </CardContent>
       </section>
-      <section>
+      <section className="grid gap-4 transition-all grid-cols-2 max-lg:grid-cols-1">
+        <CardContent>
+          <p className="p-2 font-semibold">Total Customers</p>
+          <p className="w-full flex justify-end items-center gap-1">
+            {" "}
+            <Dot color="bg-yellow-600" />
+            This Year
+            <Dot color="bg-yellow-500" /> Last Year
+          </p>
+          <CustomLineChart />
+        </CardContent>
         <CardContent>
           <p className="p-2 font-semibold">Customer Segmentations</p>
           <CustomerPieChart />
