@@ -4,6 +4,8 @@ import "./globals.css";
 import SideNavbar from "@/components/SideNavbar";
 import { cn } from "@/lib/utils";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,6 +31,7 @@ export default function RootLayout({
       >
         <SideNavbar />
         <div className="sm:p-8 w-full bg-gray-100">{children}</div>
+        <Analytics />
       </body>
     </html>
   );

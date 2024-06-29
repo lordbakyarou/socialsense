@@ -84,14 +84,14 @@ export default function ThemePage({}: Props) {
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="flex-1">
-        <div className="flex flex-col md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b ">
+        <div className="flex md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b ">
           <PageTitle title="Themes" />
           <button className="flex justify-evenly rounded-md items-center p-2 rounded bg-gray-100 font-semibold">
-            Mayur Hanwate
+            <p className="max-sm:hidden">Mayur Hanwate</p>
             <img
               width={40}
               height={40}
-              className="rounded-full"
+              className="rounded-full "
               src="https://lh3.googleusercontent.com/a/ACg8ocK4HOMAUmzsbMDCegO9UspAC-tpu8yX5wvXFcCOCZLKJQbRd1ET=s360-c-no"
             />
           </button>
