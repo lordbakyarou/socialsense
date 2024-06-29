@@ -37,6 +37,13 @@ const SideNavbar = ({}: Props) => {
         isCollapsed={mobileWidth ? true : isCollapsed}
         links={[
           {
+            title: "Dashboard",
+            href: "/",
+            label: "",
+            icon: LayoutDashboard,
+            variant: "ghost",
+          },
+          {
             title: "Themes",
             href: "/theme",
             label: "",
@@ -48,13 +55,6 @@ const SideNavbar = ({}: Props) => {
             href: "/profile",
             label: "",
             icon: User,
-            variant: "ghost",
-          },
-          {
-            title: "Dashboard",
-            href: "/dashboard",
-            label: "",
-            icon: LayoutDashboard,
             variant: "ghost",
           },
         ]}
