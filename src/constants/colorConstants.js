@@ -29,14 +29,14 @@ export const linearGradient = [
 ];
 
 export const radialGradient = [
-  "radial-gradient(circle at center, #ffcccc, #ccccff)",
-  "radial-gradient(circle at center, #ccffcc, #ffffcc)",
-  "radial-gradient(circle at center, #e0b0ff, #ffccff)",
-  "radial-gradient(circle at center, #ffdab9, #ccff99)",
-  "radial-gradient(circle at center, #b2dfdb, #b3cde0)",
-  "radial-gradient(circle at center, #ffc0cb, #e0ffff)",
-  "radial-gradient(circle at center, #e0e0d1, #ffb3ff)",
-  "radial-gradient(circle at center, #ccffff, #ffccff)",
-  "radial-gradient(circle at center, #ccccff, #ffecb3)",
-  "radial-gradient(circle at center, #d9d9d9, #f2f2f2)",
+  "bg-[radial-gradient(circle_at_center,_#ffcccc,_#ccccff)]",
+  "bg-[radial-gradient(circle_at_center,_#ccffcc,_#ffffcc)]",
+  "bg-[radial-gradient(circle_at_center,_#e0b0ff,_#ffccff)]",
+  "bg-[radial-gradient(circle_at_center,_#ffdab9,_#ccff99)]",
+  "bg-[radial-gradient(circle_at_center,_#b2dfdb,_#b3cde0)]",
+  "bg-[radial-gradient(circle_at_center,_#ffc0cb,_#e0ffff)]",
+  "bg-[radial-gradient(circle_at_center,_#e0e0d1,_#ffb3ff)]",
+  "bg-[radial-gradient(circle_at_center,_#ccffff,_#ffccff)]",
+  "bg-[radial-gradient(circle_at_center,_#ccccff,_#ffecb3)]",
+  "bg-[radial-gradient(circle_at_center,_#d9d9d9,_#f2f2f2)]",
 ];

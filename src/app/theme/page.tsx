@@ -89,7 +89,7 @@ export default function ThemePage({}: Props) {
                 {linearGradient.map((gradient) => (
                   <div
                     key={gradient}
-                    className={`w-10 h-10 ${gradient} border cursor-pointer ${
+                    className={`w-10 h-10 ${gradient}  border cursor-pointer ${
                       selectedColor === gradient ? "border-black" : ""
                     }`}
                     onClick={() => handleColorClick(gradient)}
@@ -101,10 +101,7 @@ export default function ThemePage({}: Props) {
                 {radialGradient.map((gradient) => (
                   <div
                     key={gradient}
-                    style={{
-                      background: gradient,
-                    }}
-                    className={`w-10 h-10 border cursor-pointer ${
+                    className={`w-10 h-10 ${gradient}   border cursor-pointer ${
                       selectedColor === gradient ? "border-black" : ""
                     }`}
                     onClick={() => handleColorClick(gradient)}
