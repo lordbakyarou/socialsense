@@ -204,9 +204,9 @@ export default function ProfilePage({}: Props) {
               Onboarding Script
             </p>
             <div className="flex flex-col gap-5">
-              {onboardingData.map((item) => {
+              {onboardingData.map((item, index) => {
                 return (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2" key={index}>
                     <CustomSwitch
                       title={item.title}
                       percentage={item.percentage}
