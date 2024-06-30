@@ -84,7 +84,7 @@ export default function ThemePage({}: Props) {
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="flex-1">
-        <div className="flex md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b ">
+        <section className="flex md:flex-row justify-between items-center py-3 px-6 bg-gray-50 border-b ">
           <PageTitle title="Themes" />
           <button className="flex justify-evenly rounded-md items-center p-2 rounded bg-gray-100 font-semibold">
             <p className="max-sm:hidden">Mayur Hanwate</p>
@@ -95,9 +95,9 @@ export default function ThemePage({}: Props) {
               src="https://lh3.googleusercontent.com/a/ACg8ocK4HOMAUmzsbMDCegO9UspAC-tpu8yX5wvXFcCOCZLKJQbRd1ET=s360-c-no"
             />
           </button>
-        </div>
+        </section>
         <main>
-          <div className="flex flex-col md:flex-row m-4 p-4 md:p-8 justify-between items-center bg-gray-200 rounded-md shadow-sm">
+          <section className="flex flex-col md:flex-row m-4 p-4 md:p-8 justify-between items-center bg-gray-200 rounded-md shadow-sm">
             <div className="ml-4 rounded-md text-lg max-sm:text-sm font-bold">
               Apply a skin to your profile
             </div>
@@ -112,7 +112,7 @@ export default function ThemePage({}: Props) {
                 Save
               </button>
             </div>
-          </div>
+          </section>
           <div className="flex max-lg:flex-col">
             <div className="p-2 w-full md:w-[500px] ">
               <h1 className="text-lg font-bold">Solids</h1>
@@ -164,7 +164,7 @@ export default function ThemePage({}: Props) {
                 ))}
               </div>
             </div>
-            <div className="w-full border p-2">
+            <section className="w-full border p-2">
               <div
                 className={`w-full ${selectedColor} rounded-xl text-${textColor}`}
               >
@@ -231,7 +231,7 @@ export default function ThemePage({}: Props) {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         </main>
       </div>
